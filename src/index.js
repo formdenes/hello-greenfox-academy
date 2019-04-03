@@ -14,9 +14,34 @@ function Display (props) {
   );
 }
 
-
+class SimpleGoldenAcornApp extends React.Component {
+  state = {
+    acornAmount: 0
+  }
+  increaseAcorns = (e) => {
+    this.setState({
+      acornAmount: this.state.acornAmount+1
+    })
+  }
+  decreaseAcorns = (e) => {
+    this.setState({
+      acornAmount: Math.max(this.state.acornAmount-1,0)
+    })
+  }
+  render() {
+    return (
+      <div>
+        <Button label='Buy one' handleClick={this.increaseAcorns} />
+        <Display>
+          <p>{this.state.acornAmount}</p>
+        </Display>
+        <Button label='Eat one' handleClick={decreaseAcorns} />
+      </div>
+    )
+  }
+}
 
 ReactDOM.render(
-  <h1>Hello, Green Fox Academy!</h1>,
+  <SimpleGoldenAcornApp/>,
   document.getElementById('root'),
 );
