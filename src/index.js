@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-function Button(props) {
+const Button = (props) => {
   return (<button onClick={props.handleClick}>{props.label}</button>);
 }
 
-function Display(props) {
+const Display = (props) => {
   return (
     <div>
       {props.children}
