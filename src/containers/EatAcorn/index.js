@@ -4,13 +4,13 @@ import Button from '../../components/Button';
 
 const mapStateToProps = (state) => {
   return {
-    value: 'Buy one',
+    value: 'Eat one',
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onClick: () => {
+    handleClick: () => {
       dispatch(acornEaten(1));
     },
   };
