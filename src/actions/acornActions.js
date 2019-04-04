@@ -1,15 +1,15 @@
-const increaseAcorns = (newAmount) => {
+const acornBought = (amount) => {
   return {
-    type: 'INCREASE_ACORN',
-    amount: newAmount
+    type: 'BUY_ACORN',
+    amount: amount
   }
 }
 
-const decreaseAcorns = (newAmount) => {
+const acornEaten = (amount) => {
   return {
-    type: 'DECREASE_ACORN',
-    amount: newAmount
+    type: 'EAT_ACORN',
+    amount: amount
   }
 }
 
-export {increaseAcorns, decreaseAcorns}
+export {acornBought, acornEaten}
