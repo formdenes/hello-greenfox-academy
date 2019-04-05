@@ -12,7 +12,7 @@ const App = (props) => (
       <Navbar />
       <Route exact path='/' component={Title} />
       <Route path='/simple/redux' component={ReduxGoldenAcornApp} />
-      <Route path='/simple/state' component={StateGoldenAcornApp} />
+      <Route path='/simple/states' component={StateGoldenAcornApp} />
 
     </BrowserRouter>
   </main>

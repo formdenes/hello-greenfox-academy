@@ -38,4 +38,4 @@ class StateGoldenAcornApp extends React.Component {
   }
 }
 
-export default StateGoldenAcornApp
+export default StateGoldenAcornApp;
