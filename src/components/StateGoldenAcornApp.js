@@ -31,7 +31,9 @@ class StateGoldenAcornApp extends React.Component {
     return (
       <div tabIndex="0" onKeyDown={this.handleKeyDown}>
         <Button value="Buy one" handleClick={this.buyAcorn} />
-        <Display value={this.state.acornAmount} />
+        <Display>
+          <div>{this.state.acornAmount}</div>
+        </Display>
         <Button value="Eat one" handleClick={this.eatAcorn} />
       </div>
     );
