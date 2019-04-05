@@ -1,4 +1,3 @@
-  
 module.exports = {
   module: {
     rules: [
@@ -11,5 +10,6 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
+    historyApiFallback: true,
   },
 };
