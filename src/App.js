@@ -1,13 +1,20 @@
 import React from 'react';
-import BuyAcorn from './containers/BuyAcorn';
-import EatAcorn from './containers/EatAcorn';
-import DisplayAcorn from './containers/DisplayAcorn';
+import ReduxGoldenAcornApp from './components/ReduxGoldenAcornApp';
+import StateGoldenAcornApp from './components/StateGoldenAcornApp';
+import Navbar from './components/Navbar'
+import {BrowserRouter, Route} from 'react-router-dom';
+import {Title} from './components/Title';
+
 
 const App = (props) => (
   <main>
-    <BuyAcorn />
-    <DisplayAcorn />
-    <EatAcorn />
+    <BrowserRouter>
+      <Navbar />
+      <Route exact path='/' component={Title} />
+      <Route path='/simple/redux' component={ReduxGoldenAcornApp} />
+      <Route path='/simple/state' component={StateGoldenAcornApp} />
+
+    </BrowserRouter>
   </main>
 );
 
