@@ -1,5 +1,5 @@
 import React from 'react';
-import ReduxGoldenAcornApp from './components/ReduxGoldenAcornApp';
+import ReduxGoldenAcorn from './containers/ReactApp/index';
 import StateGoldenAcornApp from './components/StateGoldenAcornApp';
 import Navbar from './components/Navbar'
 import {BrowserRouter, Route} from 'react-router-dom';
@@ -11,7 +11,7 @@ const App = (props) => (
     <BrowserRouter>
       <Navbar />
       <Route exact path='/' component={Title} />
-      <Route path='/simple/redux' component={ReduxGoldenAcornApp} />
+      <Route path='/simple/redux' component={ReduxGoldenAcorn} />
       <Route path='/simple/states' component={StateGoldenAcornApp} />
 
     </BrowserRouter>

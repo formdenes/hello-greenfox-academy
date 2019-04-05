@@ -4,9 +4,11 @@ import EatAcorn from '../containers/EatAcorn';
 import DisplayAcorn from '../containers/DisplayAcorn';
 
 const ReduxGoldenAcornApp = (props) => (
-  <main>
+  <main tabIndex="0" onKeyDown={props.onKeyDown}>
     <BuyAcorn />
-    <DisplayAcorn />
+    <DisplayAcorn>
+      <div>{props.value}</div>
+    </DisplayAcorn>
     <EatAcorn />
   </main>
 );

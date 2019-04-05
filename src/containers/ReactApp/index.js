@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { acornBought } from '../../actions/acornActions';
 import { acornEaten } from '../../actions/acornActions';
-import Display from '../../components/DisplayAcorn';
+import ReduxGoldenAcornApp from '../../components/ReduxGoldenAcornApp';
 
-/* const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     value: state.acorns.amount,
   };
@@ -19,8 +19,11 @@ const mapDispatchToProps = (dispatch) => {
       }
     },
   };
-}; */
+};
 
-const DisplayAcorn = connect()(Display);
+const ReduxGoldenAcorn = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReduxGoldenAcornApp);
 
-export default DisplayAcorn;
+export default ReduxGoldenAcorn;
